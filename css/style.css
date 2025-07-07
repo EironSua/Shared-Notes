@@ -56,13 +56,10 @@
 .btn.secondary:hover {
   background-color: #e6f0fb;
 }
-
-
 /* //--------------------------------- FIN INDEX ---------------------------------// */
 
-/* //--------------------------------- LOGIN ---------------------------------// */
 
-/* Estilo base */
+/* //--------------------------------- LOGIN ---------------------------------// */
 * {
   margin: 0;
   padding: 0;
@@ -79,6 +76,12 @@ body {
   height: 100vh;
 }
 
+.logo {
+  font-size: 2rem;
+  color: #4A90E2;
+  margin-bottom: 1.5rem;
+}
+
 .logo a {
   color: #4A90E2;
   text-decoration: none;
@@ -88,7 +91,6 @@ body {
   text-decoration: underline;
 }
 
-/* Contenedor principal */
 .login-container {
   background-color: #fff;
   padding: 2rem 3rem;
@@ -99,14 +101,6 @@ body {
   text-align: center;
 }
 
-/* Logo */
-.logo {
-  font-size: 2rem;
-  color: #4A90E2;
-  margin-bottom: 1.5rem;
-}
-
-/* Formulario */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -148,7 +142,6 @@ body {
   background-color: #e85c4d;
 }
 
-/* Enlace registro */
 .register-link {
   margin-top: 1rem;
   font-size: 0.9rem;
@@ -163,15 +156,101 @@ body {
 .register-link a:hover {
   text-decoration: underline;
 }
-
 /* //--------------------------------- FIN LOGIN ---------------------------------// */
 
-/* //--------------------------------- REGISTRO ---------------------------------// */
 
-/* Estilo específico para register (opcional) */
+/* //--------------------------------- REGISTRO ---------------------------------// */
 #register-form input[type="password"]:nth-child(6) {
   margin-bottom: 0.5rem;
 }
-
-
 /* //--------------------------------- FIN REGISTRO ---------------------------------// */
+
+
+/* //--------------------------------- DASHBOARD ---------------------------------// */
+body {
+  margin: 0;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4A90E2;
+  color: white;
+  padding: 0.8rem 1rem;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.app-title {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.profile-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: -220px;
+  width: 200px;
+  height: calc(100% - 60px);
+  background-color: #ffffff;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  padding-top: 1rem;
+  transition: left 0.3s ease;
+  z-index: 9;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+.main-content {
+  margin-top: 60px;
+  padding: 2rem;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.active ~ .main-content {
+  margin-left: 200px;
+}
+/* //--------------------------------- FIN DASHBOARD ---------------------------------// */
