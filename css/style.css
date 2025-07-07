@@ -169,6 +169,9 @@ body {
 /* //--------------------------------- DASHBOARD ---------------------------------// */
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f9ff;
+  color: #333;
 }
 
 .app-wrapper {
@@ -210,21 +213,23 @@ body {
   cursor: pointer;
 }
 
+/* Sidebar superpuesto (overlay) */
 .sidebar {
   position: fixed;
   top: 60px;
-  left: -220px;
+  left: 0;
   width: 200px;
   height: calc(100% - 60px);
   background-color: #ffffff;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
   padding-top: 1rem;
-  transition: left 0.3s ease;
-  z-index: 9;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
 }
 
 .sidebar.active {
-  left: 0;
+  transform: translateX(0);
 }
 
 .sidebar ul {
@@ -244,13 +249,24 @@ body {
   font-weight: 600;
 }
 
+/* Overlay de fondo */
+#overlay {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  background: rgba(0,0,0,0.4);
+  z-index: 998;
+  display: none;
+}
+
+#overlay.active {
+  display: block;
+}
+
 .main-content {
   margin-top: 60px;
   padding: 2rem;
-  transition: margin-left 0.3s ease;
-}
-
-.sidebar.active ~ .main-content {
-  margin-left: 200px;
 }
 /* //--------------------------------- FIN DASHBOARD ---------------------------------// */
