@@ -16,12 +16,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   // Menú lateral
-  const toggle = document.getElementById('menu-toggle');
-  const sidebar = document.getElementById('sidebar');
+  const toggleButton = document.getElementById('menu-toggle');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
 
-  toggle.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
-  });
+toggleButton.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+overlay.addEventListener('click', () => {
+  sidebar.classList.remove('active');
+  overlay.classList.remove('active');
+});
 
   // Logout
   const logoutBtn = document.getElementById('logout-btn');
