@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shared Notes - Inicio</title>
+  <title>Shared Notes - Dashboard</title>
   <link rel="stylesheet" href="css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
@@ -11,8 +11,8 @@
   <div class="app-wrapper">
     <header class="app-header">
       <button class="menu-toggle" id="menu-toggle">☰</button>
-      <h1 class="app-title">Shared Notes</h1>
-      <div class="profile-icon">👤</div>
+      <h1 class="app-title"><a href="index.html">Shared Notes</a></h1>
+      <div class="profile-icon" title="Cerrar sesión" id="logout-btn">👤</div>
     </header>
 
     <nav class="sidebar" id="sidebar">
@@ -22,16 +22,14 @@
         <li><a href="#">🎟️ Cupones</a></li>
       </ul>
     </nav>
-    
-    <div id="overlay"></div>
-    
+
     <main class="main-content">
-      <h2>Bienvenido/a a Shared Notes</h2>
+      <h2>Bienvenido/a <span id="nombre-usuario">...</span></h2>
+      <p>Tu código de vínculo es: <strong id="codigo-vinculo">---</strong></p>
       <p>Aquí irá el contenido de la sección activa.</p>
     </main>
   </div>
 
-  <script src="js/dashboard.js"></script>
-
+  <script type="module" src="js/dashboard.js"></script>
 </body>
 </html>

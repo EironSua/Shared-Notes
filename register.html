@@ -12,6 +12,9 @@
     <h1 class="logo">📝 <a href="index.html">Shared Notes</a></h1>
 
     <form class="login-form" id="register-form">
+      <label for="nombre">Nombre de usuario</label>
+      <input type="text" id="nombre" required />
+
       <label for="email">Correo electrónico</label>
       <input type="email" id="email" required />
 
@@ -21,10 +24,13 @@
       <label for="confirm-password">Confirmar contraseña</label>
       <input type="password" id="confirm-password" required />
 
-      <button type="submit">Registrarse</button>
+      <button type="submit" id="register-btn">Registrarse</button>
 
       <p class="register-link">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
     </form>
   </div>
+
+  <script type="module" src="js/register.js"></script>
 </body>
 </html>
+
