@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil | Shared Notes</title>
+  <link rel="stylesheet" href="../css/perfil.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-wrapper">
+    <header class="app-header">
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+      <h1 class="app-title">Perfil</h1>
+    </header>
+
+    <div class="main-content">
+      <section class="profile-section">
+        <div class="profile-avatar">
+          <img src="../assets/default-avatar.png" alt="Avatar" width="100" height="100" />
+        </div>
+
+        <h2 id="nombreUsuario" contenteditable="false">Nombre de Usuario</h2>
+        <p id="estadoUsuario" contenteditable="false" class="estado-editable">"Frase de estado..."</p>
+        <p id="correoUsuario">correo@ejemplo.com</p>
+
+        <div class="codigo-vinculo">
+          <p><strong>Código de vinculación:</strong> <span id="codigoVinculo">ABC-123-XYZ</span></p>
+          <button id="btnCopiarCodigo">📋 Copiar</button>
+          <button id="btnRegenerarCodigo">🔁 Regenerar</button>
+        </div>
+
+        <div class="vinculacion">
+          <button id="btnVincular">🔗 Vincular con otra persona</button>
+        </div>
+
+        <div class="lista-vinculados">
+          <h3>Personas vinculadas</h3>
+          <ul id="vinculadosList">
+            <!-- Aquí se cargan dinámicamente -->
+          </ul>
+        </div>
+
+        <div class="acciones-perfil">
+          <button id="btnEditar">✏️ Editar perfil</button>
+          <button id="btnGuardar" style="display:none;">💾 Guardar cambios</button>
+        </div>
+
+        <div class="preferencias">
+          <button id="modoClaro" style="display:none;">🌞 Modo Claro</button>
+          <button id="modoOscuro">🌙 Modo Oscuro</button>
+        </div>
+
+        <div class="cuenta">
+          <button id="btnCerrarSesion">🚪 Cerrar sesión</button>
+          <button id="btnBorrarCuenta" class="borrar-cuenta">🗑️ Borrar cuenta</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="overlay"></div>
+  <script type="module" src="../js/perfil.js"></script>
+</body>
+</html>
