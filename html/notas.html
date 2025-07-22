@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shared Notes - Bloc de Notas</title>
+  <link rel="stylesheet" href="../css/notas.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="notas-header">
+    <a href="dashboard.html"><h1>📝 Shared Notes</h1></a>
+    <button id="crear-nota">+ Nueva Nota</button>
+  </header>
+
+  <main class="notas-container" id="lista-notas">
+    <!-- Aquí se cargan las notas -->
+  </main>
+
+  <!-- Modal de edición -->
+  <div id="modal-edicion" class="modal oculto">
+    <div class="modal-contenido">
+      <input type="text" id="titulo-nota" placeholder="Título de la nota" />
+      <textarea id="contenido-nota" placeholder="Escribe tu nota aquí..."></textarea>
+      <div class="meta-info" id="meta-info"></div>
+      <div class="acciones">
+        <button id="guardar-nota">💾 Guardar</button>
+        <button id="eliminar-nota">🗑️ Eliminar</button>
+        <button id="cerrar-modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="../js/notas.js"></script>
+</body>
+</html>

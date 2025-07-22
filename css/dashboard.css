@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f9ff; /* rosa pastel suave */
+  color: #3B1E5B; /* púrpura oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #B8C0FF;
+  color: white;
+  padding: 0.8rem 1rem;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: #3B1E5B;
+}
+
+.app-title {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.profile-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.profile-icon:hover {
+  color: #C8B6FF;
+}
+
+/* Sidebar superpuesto (overlay) */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 200px;
+  height: calc(100% - 60px);
+  background-color: #FFFFFF;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  padding-top: 1rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  display: block;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background-color: #b8c0ff88;
+  color: #6B42C1;
+}
+
+/* Overlay de fondo */
+#overlay {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 60px);
+  background: rgba(58, 43, 107, 0.4);
+  z-index: 998;
+  display: none;
+}
+
+#overlay.active {
+  display: block;
+}
+
+.main-content {
+  margin-top: 60px;
+  padding: 2rem;
+}
+
+.main-content a {
+  color: #6B42C1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.main-content a:hover {
+  color: #B8C0FF;
+  text-decoration: underline;
+}

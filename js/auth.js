@@ -13,13 +13,14 @@ import {
 } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js';
 
 // REGISTRO
-export async function registrarUsuario(email, password, nombre) {
-  const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+export async function registrarUsuario(email, password, nombre, genero) {
+  const userCredential = await createUserWithEmailAndPassword(auth, email, password, genero);
   const uid = userCredential.user.uid;
 
   await setDoc(doc(db, 'users', uid), {
     nombre,
     email,
+    genero,
     codigoVinculo: generarCodigoVinculo()
   });
 

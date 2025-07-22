@@ -15,6 +15,8 @@ import {
 } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js';
 
 // Elementos DOM
+const dashboardReturn = document.getElementById('dashboardReturn');
+
 const nombreUsuarioElem = document.getElementById('nombreUsuario');
 const estadoUsuarioElem = document.getElementById('estadoUsuario');
 const correoUsuarioElem = document.getElementById('correoUsuario');
@@ -35,6 +37,13 @@ const modoOscuroBtn = document.getElementById('modoOscuro');
 const btnCerrarSesion = document.getElementById('btnCerrarSesion');
 const btnBorrarCuenta = document.getElementById('btnBorrarCuenta');
 
+
+// Boton de vuelta al dashboard
+dashboardReturn.addEventListener('click', () => {
+  window.location.href = '../html/dashboard.html';
+});
+
+
 let userGlobal = null;  // Guardar usuario actual
 let datosUsuario = null; // Guardar datos Firestore
 
@@ -47,7 +56,7 @@ onAuthStateChanged(auth, async (user) => {
 
   userGlobal = user;
 
-  // Traer datos Firestore
+  // Traer datos Firestore para cargar perfil con su información (nombre, estado, email y código de vínculo)
   const docRef = doc(db, 'users', user.uid);
   const docSnap = await getDoc(docRef);
   if (docSnap.exists()) {
@@ -63,6 +72,7 @@ onAuthStateChanged(auth, async (user) => {
     console.warn('No hay datos de usuario en Firestore');
   }
 });
+
 
 // Función para cargar personas vinculadas (simulado)
 async function cargarVinculados(codigoVinculo) {
@@ -194,9 +204,9 @@ btnBorrarCuenta.addEventListener('click', async () => {
     await userGlobal.delete();
 
     alert('Cuenta borrada exitosamente');
-    window.location.href = '../html/register.html';
+    window.location.href = '../index.html';
   } catch (error) {
     console.error('Error borrando cuenta:', error);
-    alert('Error borrando cuenta. Por favor vuelve a iniciar sesión y vuelve a intentarlo.');
+    alert('Error borrando cuenta. Por favor refresque y vuelva a intentarlo.');
   }
 });

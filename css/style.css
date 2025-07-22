@@ -1,4 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f9ff; /* rosa pastel suave */
+  color: #3B1E5B; /* púrpura oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 /* //--------------------------------- INDEX ---------------------------------// */
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -56,25 +74,12 @@
 .btn.secondary:hover {
   background-color: #E7C6FF;
 }
+
 /* //--------------------------------- FIN INDEX ---------------------------------// */
 
 
-/* //--------------------------------- LOGIN ---------------------------------// */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #FFD6FF; /* rosa pastel suave */
-  color: #3B1E5B; /* púrpura oscuro */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+/* //--------------------------------- LOGIN ---------------------------------// */
 
 .logo {
   font-size: 2rem;
@@ -159,156 +164,47 @@ body {
 .register-link a:hover {
   text-decoration: underline;
 }
+
 /* //--------------------------------- FIN LOGIN ---------------------------------// */
 
 
+
 /* //--------------------------------- REGISTRO ---------------------------------// */
+
 #register-form input[type="password"]:nth-child(6) {
   margin-bottom: 0.5rem;
 }
-/* //--------------------------------- FIN REGISTRO ---------------------------------// */
 
-
-/* //--------------------------------- DASHBOARD ---------------------------------// */
-body { /* tambien afecta a index.html */
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f5f9ff;
-  color: #3B1E5B;
-}
-
-.app-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.app-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #B8C0FF;
-  color: white;
-  padding: 0.8rem 1rem;
-  height: 60px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
-
-.menu-toggle {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.menu-toggle:hover {
-  color: #3B1E5B;
-}
-
-.app-title {
-  font-size: 1.3rem;
-  margin: 0;
-}
-
-.profile-icon {
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.profile-icon:hover {
-  color: #C8B6FF;
-}
-
-/* Sidebar superpuesto (overlay) */
-.sidebar {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 200px;
-  height: calc(100% - 60px);
-  background-color: #FFFFFF;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
-  padding-top: 1rem;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  z-index: 999;
-}
-
-.sidebar.active {
-  transform: translateX(0);
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.sidebar ul li {
-  padding: 1rem;
-  border-bottom: 1px solid #eee;
-}
-
-.sidebar ul li a {
-  text-decoration: none;
-  color: #333;
+/* Estilo del label */
+#register-form label {
+  display: block;
+  margin-bottom: 0.5rem;
   font-weight: 600;
-  display: block;
-  padding: 0.5rem 0;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #4A3399; /* púrpura medio */
+  font-size: 0.9rem;
 }
 
-.sidebar ul li a:hover {
-  background-color: #b8c0ff88;
-  color: #6B42C1;
-}
-
-/* Overlay de fondo */
-#overlay {
-  position: fixed;
-  top: 60px;
-  left: 0;
+/* Estilo del select */
+#register-form select {
   width: 100%;
-  height: calc(100% - 60px);
-  background: rgba(58, 43, 107, 0.4);
-  z-index: 998;
-  display: none;
+  padding: 0.6rem;
+  border: 1px solid #C8B6FF; /* borde pastel */
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #3B1E5B; /* texto púrpura oscuro */
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' width='14' height='14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='20,50 70,100 120,50' stroke='%234A3399' stroke-width='15' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.8rem center;
+  background-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s;
 }
 
-#overlay.active {
-  display: block;
+#register-form select:focus {
+  outline: none;
+  border-color: #4A3399; /* más intenso al enfocar */
 }
 
-.main-content {
-  margin-top: 60px;
-  padding: 2rem;
-}
-
-.main-content a {
-  color: #6B42C1;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.main-content a:hover {
-  color: #B8C0FF;
-  text-decoration: underline;
-}
-
-/* //--------------------------------- FIN DASHBOARD ---------------------------------// */
-
-
-/* //--------------------------------- Perfil ---------------------------------// */
-
-
-
-
-/* //--------------------------------- FIN Perfil ---------------------------------// */
+/* //--------------------------------- FIN REGISTRO ---------------------------------// */

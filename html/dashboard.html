@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shared Notes - Dashboard</title>
-  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/dashboard.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,11 +12,12 @@
     <header class="app-header">
   <button class="menu-toggle" id="menu-toggle">☰</button>
   <h1 class="app-title">Shared Notes</h1>
-  <a href="perfil.html" class="profile-icon" title="Ver perfil">👤</a>
+  <a href="perfil.html" class="profile-icon" title="Ver perfil">👤</a> <!-- sera la imagen de perfil -->
 </header>
 
     <nav class="sidebar" id="sidebar">
       <ul>
+        <li><a href="notas.html">📄 Notas</a></li>
         <li><a href="#">📅 Calendario</a></li>
         <li><a href="#">🎯 Puntos</a></li>
         <li><a href="#">🎟️ Cupones</a></li>
@@ -26,7 +27,7 @@
     <div id="overlay"></div>
 
     <main class="main-content">
-      <h2>Bienvenido/a <span id="nombre-usuario">...</span></h2>
+      <h2><span id="bienvenid">Bienvenido/a</span> <span id="nombre-usuario">...</span></h2>
       <p>Tu código de vínculo es: <strong id="codigo-vinculo">---</strong></p>
       <p>Aquí irá el contenido de la sección activa.</p>
     </main>
